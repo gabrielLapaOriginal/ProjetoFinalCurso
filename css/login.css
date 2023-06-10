@@ -99,9 +99,9 @@ form{
    transition: .3s;
 }
 
-input[type="email"], input[type="text"], input[type="password"], input[type="number"]{
+input[type="email"], input[type="text"], input[type="password"], input[type="number"], input[type="date"]{
     border: none;
-    margin-top: 40px;
+    margin-top: 25px;
     border-radius: 60px;
     padding: 8px 0 8px 35px;
     outline: none;
@@ -138,24 +138,27 @@ i{
     color: #658864;
 }
 .iEmail{
-    top: 40px;
+    top: 23px;
 }
 .ipassword{
-    top: 114px;
+    top: 85px;
 }
 
 .fa-user{
-    top: 40px;
+    top: 23px;
 }
 
 .fa-clipboard{
-    top: 114px;
+    top: 85px;
 }
 
 .iEmail2{
-    top: 190px;
+    top: 145px;
 }
 
 .ipassword2{
-    top: 266px;
+    top: 207px;
+}
+.fa-regular{
+    top: 277px
 }
