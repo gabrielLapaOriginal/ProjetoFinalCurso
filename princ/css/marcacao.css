@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    overflow: hidden;
+}
+body{
+    height: 100vh;
+    background: linear-gradient(
+        45deg,
+        rgb(197, 197, 197),
+        #d5d7da,
+        #ffffff
+    );
+}
+header{
+    width: 100vw;
+    height: 50px;
+    background: linear-gradient(to right, rgb(79, 250, 150), rgb(50, 230, 221));
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    flex-direction: row;
+    border-bottom: 1px solid #ffffff;
+}
+.div-header{
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 10px;
+}
+.voltar{
+height: 100%;
+width: 90px;
+cursor: pointer;
+background: transparent;
+display: flex;
+justify-content: center;
+align-items: center;
+border: none;
+border-left: 1px solid white;
+padding: 0 5px;
+outline: none;
+color: white;
+font-size: 20px;
+}
+h1{
+    font-size: 20px;
+    color: #ffffff;
+}
+.div-nome{
+    height: 80px;
+    margin: 1rem 0 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nome{
+    color: #4ed44e;
+    font-size: 35px;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.div-form{
+    margin-top: 1rem;
+    max-width: 700px;
+    width: 100%;
+    border-radius: 5px;
+    background: #fff;
+    padding: 25px 30px;
+    box-shadow: 0 0 5px darkgray;
+}
+.div-form .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+.div-form .title::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: #4ed44e;
+}
+.div-form form .user-details{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 10px);
+
+}
+.user-details .input-box .details{
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+}
+.user-details .input-box .input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left:  15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3 ease-in-out;
+}
+.user-details .input-box .input:focus,
+.user-details .input-box .input:valid{
+    border-color: #4ed44e;
+}
+form .idade .idade-title{
+    font-size: 20px;
+    font-weight: 500;
+}
+form .idade .idade-div{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 14px 0;
+}
+.idade .idade-div label{
+    display: flex;
+    align-items: center;
+}
+.idade .idade-div .dot{
+    height: 18px;
+    width: 18px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+    transition: all 0.3 ease;
+}
+#sim:checked ~ .idade-div label .sim,
+#nao:checked ~ .idade-div label .nao{
+    border-color: #4ed44e;
+    background: #fff;
+}
+form input[type="radio"]{
+    display: none;
+}
+form .button{
+    height: 45px;
+    margin: 45px 0;
+    width: 100%;
+}
+form .button input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background: linear-gradient(to right, rgb(79, 250, 150), rgb(50, 230, 221));
+}
+form .button input:hover{
+    background: linear-gradient(to left, rgb(79, 250, 150), rgb(50, 230, 221));
+    cursor: pointer;
+}
+
+@media (max-width: 584px){
+    .div-form{
+        
+        max-width: 100%;
+    }
+    form .user-details .input-box{
+        margin-bottom: 15px;
+        width: 100%;
+        
+    }
+    form .idade .idade-div{
+        width: 100%;
+    }
+    .div-form form .user-details{
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+    .user-details::-webkit-scrollbar{
+        width: 0;
+    }
+}
+

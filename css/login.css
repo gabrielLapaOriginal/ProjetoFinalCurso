@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+header{
+    width: 100vw;
+    height: 50px;
+    background: linear-gradient(to right, rgb(79, 250, 150), rgb(50, 230, 221));
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    flex-direction: row;
+    border-bottom: 1px solid #ffffff;
+}
+.div-header{
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 10px;
+}
+.voltar{
+height: 100%;
+width: 90px;
+cursor: pointer;
+background: transparent;
+display: flex;
+justify-content: center;
+align-items: center;
+border: none;
+border-left: 1px solid white;
+padding: 0 5px;
+outline: none;
+color: white;
+font-size: 20px;
+}
+h1{
+    font-size: 20px;
+    color: #ffffff;
+}
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container{
+    background-color: whitesmoke;
+    padding: 6px;
+    width: 350px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 darkgray;
+}
+
+form{
+    position: absolute;
+    margin-top: 85px;
+    transition: .5s;
+    width: 300px;
+    height: 400px;
+}
+
+.buttonsForm{
+    margin-top: 40px;
+    position: relative;
+    border-radius: 30px;
+    box-shadow: 0 0 10px #1bcf15;
+}
+
+.buttonsForm button{
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    position: relative;
+    padding: 10px 29px;
+}
+.btnColor{
+   position: absolute;
+   width: 108px;
+   height: 100%;
+   background: linear-gradient(to right, #56e956, #63f8df);
+   border-radius: 30px;
+   transition: .3s;
+}
+
+input[type="email"], input[type="text"], input[type="password"], input[type="number"]{
+    border: none;
+    margin-top: 40px;
+    border-radius: 60px;
+    padding: 8px 0 8px 35px;
+    outline: none;
+    width: 100%;
+}
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+
+}
+button[type="submit"]{
+    background: #0fc80f;
+    color: white;
+    border-radius: 30px;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 8px 0 8px 15px;
+    font-size: 15px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+#login{
+    left: 25px;
+}
+
+#cadastro{
+    left: 450px;
+}
+
+i{
+    position: absolute;
+    left: 0;
+    padding: 10px 10px;
+    color: #658864;
+}
+.iEmail{
+    top: 40px;
+}
+.ipassword{
+    top: 114px;
+}
+
+.fa-user{
+    top: 40px;
+}
+
+.fa-clipboard{
+    top: 114px;
+}
+
+.iEmail2{
+    top: 190px;
+}
+
+.ipassword2{
+    top: 266px;
+}
