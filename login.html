@@ -10,6 +10,7 @@
     <script src="script/cpf.js" defer></script>
     <script src="https://kit.fontawesome.com/cf6fa412bd.js"></script>
     <script src="https://kit.fontawesome.com/bd7015c02f.js" crossorigin="anonymous"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <header>
@@ -48,7 +49,10 @@
 
             <input type="password" id="senha2" placeholder="Digite sua senha" required>
             <i class="fas fa-lock ipassword2"></i>
-            
+
+            <input class="input" id="data" type="date" required>
+            <i class="fa-regular fa-calendar-days fa-lg" style="color: #658864;"></i>
+
 
             <button id="cadastrar" type="submit">Cadastrar</button>
         </form>
