@@ -25,10 +25,6 @@ public class Medico implements Serializable{
 	private String nome;
 	private String especialidade;
 	
-	@JsonIgnore
-	@OneToMany(mappedBy = "medico")
-	private List<Consulta> consultas = new ArrayList<>();
-	
 	public Medico() {}
 
 	public Medico(Integer idMedico, String nome, String especialidade) {
@@ -62,11 +58,6 @@ public class Medico implements Serializable{
 		this.especialidade = especialidade;
 	}
 
-	
-	
-	public List<Consulta> getConsultas() {
-		return consultas;
-	}
 
 	@Override
 	public int hashCode() {

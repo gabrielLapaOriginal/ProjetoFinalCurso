@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/bd7015c02f.js" crossorigin="anonymous"></script>   
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> 
+    <script src="../script/marcacao.js"></script>
+    <link rel="stylesheet" href="css/marcacao.css">
+    <title>+Vida - marcação</title>
+</head>
+<body>
+    <header>
+        <div class="div-header"><i class="fa-solid fa-plus fa-beat" style="color: #ffffff;"></i>
+        <h1>Vida</h1>
+        </div>
+         <button class="voltar" onclick="window.location.href='index.html'">Voltar</button>
+    </header>
+<main>
+    <div class="div-nome">
+        
+    </div>
+
+    <div class="div-form">
+        <div class="title">Marcação</div>
+        <form id="consulta" >
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Médico/Especialidade</span>
+                    <select class="input" name="médico" id="medico" required>
+                        <option value="" selected></option>
+                        
+                    </select>
+                </div>
+                <div class="input-box">
+                    <span class="details">Data da consulta</span>
+                    <input class="input" type="date" name="data" id="data" min="2023-06-13" required>
+                    </input>
+                </div>
+                <div class="input-box">
+                    <span class="details">Hora da consulta</span>
+                    <select class="input" name="horario" id="horario" required>
+                        <option value="" selected></option>
+                        <option value="09:00">08:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="13:00">13:00</option>
+                        <option value="16:00">16:00</option>
+                        <option value="18:00">18:00</option>
+                    </select>
+                </div>
+                <!-- <div class="input-box idade radio">
+                    <input type="radio" name="idade"  id="sim" value="sim"
+                    onclick="document.getElementById('responsavel').style.display='block'">
+                    <input type="radio" name="idade"  id="nao" value="nao"
+                    onclick="document.getElementById('responsavel').style.display='none'">
+                    <span class="idade-title">Você é menor de idade ?</span>
+                    <div class="idade-div">
+                        <label for="sim">
+                            <span class="dot sim"></span>
+                            <span>Sim</span>
+                        </label>
+                        <label for="nao">
+                            <span class="dot nao"></span>
+                            <span>Não</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="input-box responsavel" id="responsavel" style="display: none;">
+                    <span class="details">Nome do responsavel</span>
+                    <input class="input" type="text" name="responsavel" id="responsavel">
+                    </input>
+                </div>
+            </div> -->
+            <div class="button">
+            <input class="submit" type="submit" value="Marcar">
+            </div>
+        </form>
+    </div>
+
+
+    
+
+</body>
+</html>

@@ -21,31 +21,29 @@ public class Consulta implements Serializable{
 	private String dataDaConsulta;
 	private String horaDaConsulta;
 	
-	@ManyToOne
-	@JoinColumn(name="medico_id")
-	private Medico medico;
+	private Integer medicoId;
 	
-	@ManyToOne
-	@JoinColumn(name="client_id")
-	private Cliente paciente;
+	private Integer clienteId;
 	
 	public Consulta() {}
 
-	public Consulta(Integer idConsulta, String dataDaConsulta, String horaDaConsulta, Medico medico,
-			Cliente paciente) {
+	public Consulta(Integer idConsulta, String dataDaConsulta, String horaDaConsulta, Integer medicoId,
+			Integer clienteId) {
 		super();
 		this.idConsulta = idConsulta;
 		this.dataDaConsulta = dataDaConsulta;
 		this.horaDaConsulta = horaDaConsulta;
-		this.medico = medico;
-		this.paciente = paciente;
+		this.medicoId = medicoId;
+		this.clienteId = clienteId;
 	}
 
-	public Integer getId_consulta() {
+	
+
+	public Integer getIdConsulta() {
 		return idConsulta;
 	}
 
-	public void setId_consulta(Integer idConsulta) {
+	public void setIdConsulta(Integer idConsulta) {
 		this.idConsulta = idConsulta;
 	}
 
@@ -65,21 +63,23 @@ public class Consulta implements Serializable{
 		this.horaDaConsulta = horaDaConsulta;
 	}
 
-	public Medico getMedico() {
-		return medico;
+	public Integer getMedicoId() {
+		return medicoId;
 	}
 
-	public void setMedico(Medico medico) {
-		this.medico = medico;
+	public void setMedicoId(Integer medicoId) {
+		this.medicoId = medicoId;
 	}
 
-	public Cliente getPaciente() {
-		return paciente;
+	public Integer getClienteId() {
+		return clienteId;
 	}
 
-	public void setPaciente(Cliente paciente) {
-		this.paciente = paciente;
+	public void setClienteId(Integer clienteId) {
+		this.clienteId = clienteId;
 	}
+
+
 	
 	
 	

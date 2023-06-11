@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
@@ -26,13 +27,13 @@ public class ClienteResource {
 	@PostMapping
 	public ResponseEntity<Cliente> cadastroCliente(@RequestBody Cliente obj){
 		Cliente c = service.insert(obj);
-		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(c.getId_cliente()).toUri();
+		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(c.getIdCliente()).toUri();
 		return ResponseEntity.created(uri).body(c);
 	}
 	
-	@PostMapping(value = "/login/{email}/{senha}")
-	public ResponseEntity<Cliente> loginCliente(@PathVariable String email, @PathVariable String senha){
-		Cliente obj = service.login(email, senha);
+	@PostMapping(value = "/login")
+	public ResponseEntity<Cliente> loginCliente(@RequestBody Cliente c){
+		Cliente obj = service.login(c.getEmail(), c.getSenha());
 		return ResponseEntity.ok().body(obj);
 	}
 	
@@ -40,6 +41,12 @@ public class ClienteResource {
 	public ResponseEntity<List<Cliente>> todosClientes(){
 		List<Cliente> list = service.findAll();
 		return ResponseEntity.ok().body(list);
+	}
+	
+	@GetMapping("/{id}")
+	public ResponseEntity<Cliente> findById(@PathVariable Integer id){
+		Cliente obj = service.findById(id);
+		return ResponseEntity.ok().body(obj);
 	}
 	
 }

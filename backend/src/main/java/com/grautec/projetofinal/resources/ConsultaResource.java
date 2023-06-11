@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.grautec.projetofinal.entities.Consulta;
+import com.grautec.projetofinal.entities.ConsultaDTO;
 import com.grautec.projetofinal.services.ConsultaService;
 
 @RestController
@@ -26,15 +27,15 @@ public class ConsultaResource {
 	ConsultaService service;
 	
 	@GetMapping(value = "/paciente/{id}")
-	public ResponseEntity<List<Consulta>> consultasPaciente(@PathVariable Integer id){
-		List<Consulta> list = service.consultasPaciente(id);
-		return ResponseEntity.ok().body(list);
+	public ResponseEntity<ConsultaDTO> consultasPaciente(@PathVariable Integer id){
+		ConsultaDTO obj = service.consultasPaciente(id);
+		return ResponseEntity.ok().body(obj);
 	}
 	
 	@PostMapping
 	public ResponseEntity<Consulta> marcarConsulta(@RequestBody Consulta obj){
 		obj = service.insert(obj);
-		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getId_consulta()).toUri();
+		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getIdConsulta()).toUri();
 		return ResponseEntity.created(uri).body(obj);
 	}
 	

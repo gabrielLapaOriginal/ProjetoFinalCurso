@@ -28,19 +28,20 @@ public class Cliente implements Serializable{
 	private String senha;
 	private String dataDeNascimento;
 	
-	@JsonIgnore
-	@OneToMany(mappedBy = "paciente")
-	private List<Consulta> consultas = new ArrayList<>();
 	
 	public Cliente () {}
 
-	public Integer getId_cliente() {
+	
+
+	public Integer getIdCliente() {
 		return idCliente;
 	}
 
-	public void setId_cliente(Integer idCliente) {
+	public void setIdCliente(Integer idCliente) {
 		this.idCliente = idCliente;
 	}
+
+
 
 	public String getNome() {
 		return nome;
@@ -82,9 +83,6 @@ public class Cliente implements Serializable{
 		this.dataDeNascimento = dataDeNascimento;
 	}
 	
-	public List<Consulta> getConsultas() {
-		return consultas;
-	}
 
 	@Override
 	public int hashCode() {

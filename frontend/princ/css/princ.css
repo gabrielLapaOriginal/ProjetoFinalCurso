@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    
+}
+body{
+    height: 100vh;
+    background: linear-gradient(
+        45deg,
+        rgb(197, 197, 197),
+        #d5d7da,
+        #ffffff
+    );
+
+}
+header{
+    width: 100vw;
+    height: 50px;
+    background: linear-gradient(to right, rgb(79, 250, 150), rgb(50, 230, 221));
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    flex-direction: row;
+    border-bottom: 1px solid #ffffff;
+}
+.div-header{
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 10px;
+}
+.sair{
+height: 100%;
+width: 90px;
+cursor: pointer;
+background: transparent;
+display: flex;
+justify-content: center;
+align-items: center;
+border: none;
+border-left: 1px solid white;
+padding: 0 5px;
+outline: none;
+color: white;
+font-size: 20px;
+
+}
+.div-nome{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nome{
+    margin-top: 100px;
+    color: #4ed44e;
+    font-size: 35px;
+}
+.div-cards{
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 350px;
+    height: 200px;
+    margin: 0 10px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    background-color: #4ed44e;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.card h1{
+    font-size: 20px;
+    text-align: left;
+    margin: 20px 0  50px 20px;
+    width: 200px;
+}
+.card p{
+    font-size: 10px;
+    margin-left: 20px;
+    text-align: left;
+    color: #ffffff;
+}
+.fa-regular, .i2{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+}
+h1{
+    font-size: 20px;
+    color: #ffffff;
+}
