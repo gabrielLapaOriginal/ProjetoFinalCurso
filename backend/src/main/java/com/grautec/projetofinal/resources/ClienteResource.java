@@ -26,6 +26,16 @@ public class ClienteResource {
 	
 	@PostMapping
 	public ResponseEntity<Cliente> cadastroCliente(@RequestBody Cliente obj){
+		List<Cliente> list = service.findAll();
+		for(Cliente e : list) {
+			if(obj.getCPF().equals(e.getCPF())) {
+				obj.setCPF("");
+				return ResponseEntity.ok().body(obj);
+			} else if(obj.getEmail().equals(e.getEmail())) {
+				obj.setEmail("");
+				return ResponseEntity.ok().body(obj);
+			}
+		}
 		Cliente c = service.insert(obj);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(c.getIdCliente()).toUri();
 		return ResponseEntity.created(uri).body(c);
