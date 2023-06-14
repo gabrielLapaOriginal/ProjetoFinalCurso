@@ -39,6 +39,15 @@ formCadastro.addEventListener('submit', (e)=>{
     })
     .then((res)=>{
         console.log(res)
+        user = res.data
+        if(user.email == ""){
+            alert("Email já cadastrado, tente outro.")
+        }else if (user.cpf == ""){
+            alert("Esse CPF já foi cadastrado, tente outro.")
+        }else{
+            alert("Cadastrado com sucexo!")
+            window.location.href = "login.html";
+        }
     })
 })
 
@@ -53,9 +62,11 @@ formLogin.addEventListener('submit', (e)=>{
     }).then((res)=>{
         console.log(res);
         user = res.data;
-        if(user != null){
+        if(user != ""){
             window.location.href = "princ/index.html"
             localStorage.setItem('user', user.idCliente)
+        }else{
+            alert("Email e/ou Senha incorreto(s)!")
         }
     })
 })

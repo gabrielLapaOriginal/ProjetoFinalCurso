@@ -1,7 +1,9 @@
 var user = localStorage.getItem('user')
 if(user == null){
+    
     window.location.href = "../login.html"
 }
+
 
 const url = 'http://localhost:8080/'
 window.addEventListener('load', (e)=>{
@@ -17,3 +19,10 @@ window.addEventListener('load', (e)=>{
         }
     )
 })
+
+function sair(){
+    if(confirm("Deseja mesmo sair?")){
+        localStorage.setItem('user', null);
+        window.location.href = '../login.html'        
+    }
+}

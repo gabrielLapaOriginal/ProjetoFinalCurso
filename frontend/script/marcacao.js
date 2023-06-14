@@ -42,7 +42,8 @@ window.addEventListener('load', (e) => {
             clienteId: parseInt(user)
 
         }).then((res) => {
-            console.log(res)
+            alert("Consulta marcada com sucexo!");
+            window.location.href="MC.html"
         })
 
     })
